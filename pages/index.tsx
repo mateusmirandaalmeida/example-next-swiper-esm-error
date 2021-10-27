@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import { Navigation } from "swiper";
 
 const Home: NextPage = () => {
   return (
@@ -8,6 +9,7 @@ const Home: NextPage = () => {
       <Swiper
         spaceBetween={50}
         slidesPerView={3}
+        modules={[Navigation]}
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
       >
